@@ -1,0 +1,14 @@
+<!-- two way data binding -->
+
+<!-- exemplo 1 -->
+<input
+  type="text"
+  [value]="placeholder"
+  (input)="placeholder = $any($event.target).value"
+/>
+<p>{{ placeholder }}</p>
+
+<!-- exemplo 2 -->
+
+<input type="text" [(ngModel)]="placepass" />
+<p [style.color]="color">{{ placepass }}</p>
